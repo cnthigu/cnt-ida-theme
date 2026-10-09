@@ -1,21 +1,19 @@
-# cnt-ida-theme
+# CNT IDA Theme
 
-**IDA Pro dark theme** A dark theme for [IDA Pro](https://hex-rays.com/ida-pro). Disassembly, decompiler, syntax highlighting. Personal project.
+A dark theme for IDA Pro
 
 ## How does it work?
 
-IDA Pro theme for disassembly, decompiler and the rest. Install and pick it from the themes menu.
+The theme changes the colors of disassembly, pseudocode, and syntax highlighting. Install it and select it from IDA's themes menu.
 
 ## Demo
 
-![IDA Pro dark theme - cnt-ida-theme screenshot](screenshot.png)
+![IDA Pro dark theme](screenshot.png)
 
 ## Installation
 
-Copy the `cnt-ida-theme` folder to your IDA `\themes` directory.
+Copy the `cnt-ida-theme` folder into IDA's `themes` directory.
 
-Then in IDA: **Options** → **Themes** → select **cnt-ida-theme** → **OK**.
+Then go to **Options → Themes → cnt-ida-theme → OK**.
 
----
-
-Note: This is my personal theme I made for my own use and am sharing with the community. If it helps with your workflow, feel free to use!
+This is my personal theme, made for my own use and shared with the community. If it helps with your workflow, feel free to use it.
