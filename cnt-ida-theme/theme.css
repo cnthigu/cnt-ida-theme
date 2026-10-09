@@ -1,0 +1,248 @@
+/*
+  cnt-ida-theme for IDA Pro
+*/
+
+@importtheme "dark";
+
+@def default_bg_color #1e1e1e;
+@def default_bg_color_darker #252526;
+@def default_bg_color_default #2d2d2d;
+@def default_text_color #d4d4d4;
+@def default_border_color #454545;
+@def blue_border_color_hover #569cd6;
+@def blue_border_color_focus #569cd6;
+@def dock_title_bg_color #252526;
+@def menu_border_color #3c3c3c;
+
+QWidget
+{
+    background-color: ${default_bg_color};
+    color: ${default_text_color};
+}
+
+QTextEdit,
+QPlainTextEdit
+{
+    background-color: ${default_bg_color_darker};
+}
+
+QMenuBar,
+QMenuBar::item
+{
+    background-color: #252526;
+    color: ${default_text_color};
+}
+
+QMenu
+{
+    border: 1px solid ${menu_border_color};
+}
+
+QPushButton:hover,
+QPushButton:default
+{
+    border: 1px solid ${blue_border_color_hover};
+}
+
+QPushButton:default
+{
+    background-color: #094771;
+}
+
+QLineEdit:hover
+{
+    border: ${blue_border_color_hover};
+}
+
+QLineEdit:focus
+{
+    border: ${blue_border_color_focus};
+}
+
+QComboBox:hover
+{
+    border: 1px solid ${blue_border_color_hover};
+}
+
+QComboBox:focus
+{
+    border: 1px solid ${blue_border_color_focus};
+}
+
+QTabBar::tab:selected
+{
+    background-color: #2d2d2d;
+}
+
+QHeaderView::section
+{
+    background-color: #252526;
+}
+
+QScrollBar::handle
+{
+    background-color: #454545;
+}
+
+log_widget_t
+{
+    color: ${default_text_color};
+    background-color: ${default_bg_color};
+}
+
+@def cnt_highlight_color rgba(86, 156, 214, 0.35);
+
+CustomIDAMemo
+{
+    border: none;
+
+    qproperty-line-fg-default: #d4d4d4;
+    qproperty-line-fg-regular-comment: #6a9955;
+    qproperty-line-fg-repeatable-comment: #6a9955;
+    qproperty-line-fg-automatic-comment: #5a8a45;
+    qproperty-line-fg-insn: #d4d4d4;
+    qproperty-line-fg-dummy-data-name: #9cdcfe;
+    qproperty-line-fg-regular-data-name: #9cdcfe;
+    qproperty-line-fg-demangled-name: #4ec9b0;
+    qproperty-line-fg-punctuation: #808080;
+    qproperty-line-fg-charlit-in-insn: #ce9178;
+    qproperty-line-fg-strlit-in-insn: #ce9178;
+    qproperty-line-fg-numlit-in-insn: #b5cea8;
+    qproperty-line-fg-void-opnd: #569cd6;
+    qproperty-line-fg-code-xref: #4ec9b0;
+    qproperty-line-fg-data-xref: #9cdcfe;
+    qproperty-line-fg-code-xref-to-tail: #ce9178;
+    qproperty-line-fg-data-xref-to-tail: #b5cea8;
+    qproperty-line-fg-error: #f44747;
+    qproperty-line-fg-line-prefix: #808080;
+    qproperty-line-fg-opcode-byte: #808080;
+    qproperty-line-fg-extra-line: #c586c0;
+    qproperty-line-fg-alt-opnd: #9cdcfe;
+    qproperty-line-fg-hidden: #dcdcaa;
+    qproperty-line-fg-libfunc: #4ec9b0;
+    qproperty-line-fg-locvar: #9cdcfe;
+    qproperty-line-fg-dummy-code-name: #dcdcaa;
+    qproperty-line-fg-asm-directive: #569cd6;
+    qproperty-line-fg-macro: #c586c0;
+    qproperty-line-fg-strlit-in-data: #ce9178;
+    qproperty-line-fg-charlit-in-data: #ce9178;
+    qproperty-line-fg-numlit-in-data: #b5cea8;
+    qproperty-line-fg-keyword: #569cd6;
+    qproperty-line-fg-register-name: #9cdcfe;
+    qproperty-line-fg-import-name: #c586c0;
+    qproperty-line-fg-segment-name: #d7ba7d;
+    qproperty-line-fg-dummy-unknown-name: #9cdcfe;
+    qproperty-line-fg-code-name: #dcdcaa;
+    qproperty-line-fg-unknown-name: #c586c0;
+    qproperty-line-fg-collapsed-line: #569cd6;
+
+    qproperty-line-bg-default: #1e1e1e;
+    qproperty-line-bg-selected: #094771;
+    qproperty-caret: #d4d4d4;
+
+    qproperty-line-pfx-libfunc: #4ec9b0;
+    qproperty-line-pfx-func: #808080;
+    qproperty-line-pfx-insn: #569cd6;
+    qproperty-line-pfx-data: #808080;
+    qproperty-line-pfx-unexplored: #6a9955;
+    qproperty-line-pfx-extern: #c586c0;
+    qproperty-line-pfx-current-line: #569cd6;
+    qproperty-line-pfx-current-item: #569cd6;
+    qproperty-line-pfx-lumina: #4ec9b0;
+
+    qproperty-line-bgovl-current-line: rgba(86, 156, 214, 0.12);
+    qproperty-line-bg-highlight: ${cnt_highlight_color};
+
+    qproperty-graph-bg-top: #252526;
+    qproperty-graph-bg-bottom: #1e1e1e;
+    qproperty-graph-node-title-normal: #d4d4d4;
+    qproperty-graph-node-title-selected: #569cd6;
+    qproperty-graph-node-title-current: #9cdcfe;
+    qproperty-graph-node-frame-group: #569cd6;
+    qproperty-graph-node-shadow: #000000;
+    qproperty-graph-node-high1: #0d3d2e;
+    qproperty-graph-node-high2: #3d1e0d;
+    qproperty-graph-node-foreign: #f44747;
+    qproperty-graph-edge-normal: #569cd6;
+    qproperty-graph-edge-yes: #4ec9b0;
+    qproperty-graph-edge-no: #f44747;
+    qproperty-graph-edge-high: #c586c0;
+    qproperty-graph-edge-selected: #dcdcaa;
+    qproperty-graph-node-frame-selected: #dcdcaa;
+
+    qproperty-line-fg-patched-bytes: #ce9178;
+    qproperty-line-fg-unsaved-changes: #d7ba7d;
+    qproperty-line-bg-bpt-enabled: #5a1e1e;
+    qproperty-line-bg-bpt-disabled: #1e5a3d;
+    qproperty-line-bg-bpt-unavailable: #5a4a1e;
+    qproperty-bookmark-star-outline: #569cd6;
+}
+
+CustomIDAMemo[debugging="true"]
+{
+    qproperty-line-bg-default: #252526;
+}
+
+CustomIDAMemo[hints="true"]
+{
+    qproperty-line-bg-default: #252526;
+}
+
+TCpuRegs
+{
+    background-color: #252526;
+    qproperty-register-defined: #d4d4d4;
+    qproperty-register-changed: #9cdcfe;
+    qproperty-register-edited: #dcdcaa;
+    qproperty-register-unavailable: #808080;
+}
+
+TCpuRegs ui_label_t
+{
+    color: #569cd6;
+}
+
+TextArrows
+{
+    qproperty-jump-in-function: #4ec9b0;
+    qproperty-jump-external-to-function: #c586c0;
+    qproperty-jump-under-cursor: #569cd6;
+    qproperty-jump-target: #4ec9b0;
+    qproperty-register-target: #9cdcfe;
+}
+
+navband_t
+{
+    qproperty-lib-function: #4ec9b0;
+    qproperty-function: #dcdcaa;
+    qproperty-code: #569cd6;
+    qproperty-data: #9cdcfe;
+    qproperty-undefined: #b5cea8;
+    qproperty-extern: #c586c0;
+    qproperty-lumina-function: #4ec9b0;
+
+    qproperty-hl-lib-function: #6ef0d0;
+    qproperty-hl-function: #f0e0a0;
+    qproperty-hl-code: #6eb0f0;
+    qproperty-hl-data: #b0e0fe;
+    qproperty-hl-undefined: #c5e0a8;
+    qproperty-hl-extern: #e0a0e0;
+    qproperty-hl-lumina-function: #6ef0d0;
+
+    qproperty-hl-outline: #569cd6;
+    qproperty-error: #f44747;
+    qproperty-gap: #454545;
+    qproperty-cursor: #569cd6;
+    qproperty-auto-analysis-cursor: #d7ba7d;
+}
+
+text_area_t
+{
+    qproperty-keyword1-fg: #569cd6;
+    qproperty-keyword2-fg: #c586c0;
+    qproperty-keyword3-fg: #569cd6;
+    qproperty-string-fg: #ce9178;
+    qproperty-comment-fg: #6a9955;
+    qproperty-preprocessor-fg: #569cd6;
+    qproperty-user1-fg: #4ec9b0;
+}
